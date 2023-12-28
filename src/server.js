@@ -4,16 +4,6 @@ import { json } from './middlewares/json.js'
 import { routes } from './routes.js'
 import { extractQueryParams } from './utils/extract-query-params.js'
 
-// Query Parameters: URL Stateful => Filtros, paginação, não-obrigatórios
-// Route Parameters: identificar recursos (identificar um recurso)
-// Request Body: Conteúdo para criação/atualização
-
-// http://localhost:3333/users?userId=1?name=rafael
-// GET http://localhost:3333/users/1
-// DELETE http://localhost:3333/users/1
-
-// POST http://localhost:3333/users
-
 const server = http.createServer(async (req, res) => {
   const { method, url } = req
 
